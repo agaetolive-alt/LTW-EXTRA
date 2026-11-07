@@ -11,7 +11,7 @@ jobs:
           java-version: 21
       - run: chmod +x gradlew
       - run: ./gradlew build --stacktrace
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: mod
           path: build/libs/*.jar
