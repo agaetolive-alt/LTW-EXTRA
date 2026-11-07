@@ -3,16 +3,16 @@
   "id": "ltw-extra",
   "version": "1.0.0",
   "name": "LTW EXTRA",
-  "description": "Smart Translation Mod - Filter + Merge + Cache for Sodium + LTW by Walkys",
-  "authors": ["ITzRouk23"],
+  "description": "Smart Translation Mod - Filter + Merge + Cache for Sodium + LTW",
+  "authors": ["LTW EXTRA Team"],
   "license": "MIT",
   "environment": "client",
   "entrypoints": {
-    "client": ["com.walky.ltwextra.LTWEExtraMod"]
+    "client": ["com.ltwextra.LTWEExtraMod"]
   },
   "depends": {
-    "fabricloader": ">=0.18.3",
+    "fabricloader": ">=0.16.0",
     "minecraft": "1.21.1",
-    "sodium": ">=0.6.13"
+    "sodium": ">=0.6.0"
   }
 }
