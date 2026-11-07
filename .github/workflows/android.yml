@@ -18,7 +18,5 @@ jobs:
         distribution: 'temurin'
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
     - name: Build with Gradle
-      run: ./gradlew build --no-daemon
+      run: gradle build --no-daemon
