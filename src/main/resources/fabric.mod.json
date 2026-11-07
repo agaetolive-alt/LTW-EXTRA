@@ -2,17 +2,21 @@
   "schemaVersion": 1,
   "id": "ltw-extra",
   "version": "1.0.0",
-  "name": "LTW EXTRA",
-  "description": "Smart Translation Mod - Filter + Merge + Cache for Sodium + LTW",
-  "authors": ["LTW EXTRA Team"],
+  "name": "LTW Extra",
+  "description": "FPS Boost - Smart Filter, Smart Merge, Smart Cache",
+  "authors": ["LTW"],
   "license": "MIT",
+  "icon": "assets/ltw-extra/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": ["com.ltwextra.LTWEExtraMod"]
+    "client": [
+      "com.ltwextra.LTWEExtraMod"
+    ]
   },
+  "mixins": [],
   "depends": {
     "fabricloader": ">=0.16.0",
-    "minecraft": "1.21.1",
-    "sodium": ">=0.6.0"
+    "fabric-api": "*",
+    "minecraft": "~1.21.1"
   }
 }
