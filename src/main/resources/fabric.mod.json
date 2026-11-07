@@ -1,17 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "ltw-extra",
-  "version": "1.0.0",
-  "name": "LTW Extra",
-  "description": "FPS Boost - Smart Filter, Smart Merge, Smart Cache",
-  "authors": ["LTW"],
+  "id": "ltwextra",
+  "version": "${version}",
+  "name": "LTWE Extra",
+  "description": "Extra mod for LTWE",
+  "authors": ["LTWE"],
+  "contact": {},
   "license": "MIT",
-  "icon": "assets/ltw-extra/icon.png",
-  "environment": "client",
+  "icon": "assets/ltwextra/icon.png",
+  "environment": "*",
   "entrypoints": {
-    "client": [
-      "com.ltwextra.LTWEExtraMod"
-    ]
+    "main": ["com.ltwextra.LTWEExtraMod"]
   },
   "mixins": [],
   "depends": {
