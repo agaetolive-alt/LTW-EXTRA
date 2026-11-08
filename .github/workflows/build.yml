@@ -16,15 +16,11 @@ jobs:
 
       - name: Setup Gradle Wrapper
         run: |
-          gradle wrapper
+          gradle wrapper --gradle-version 8.10
           chmod +x gradlew
 
       - name: Build with Gradle
         run: ./gradlew build
-
-      - name: Upload Compiled Mod Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: LTW-EXTRA-Jar
-          path: build/libs/*.jar
+        env:
+          GRADLE_OPTS: -Dorg.gradle.welcome.provider.enabled=false
           
