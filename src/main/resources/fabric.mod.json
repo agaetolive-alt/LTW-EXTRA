@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "ltw-extra",
   "name": "LTW EXTRA",
-  "version": "${version}",
+  "version": "1.0.0",
   "environment": "client",
   "entrypoints": {
     "client": [
@@ -13,8 +13,8 @@
     "ltw-extra.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
-    "minecraft": "${minecraft_version}",
+    "fabricloader": ">=0.18.3",
+    "minecraft": "1.21.11",
     "java": ">=21"
   }
 }
