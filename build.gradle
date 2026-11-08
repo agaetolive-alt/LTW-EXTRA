@@ -1,8 +1,0 @@
-pluginManagement {
-    repositories {
-        maven { url = "https://fabricmc.net" }
-        mavenCentral()
-    }
-}
-
-rootProject.name = 'LTW_EXTRA'
