@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.ltwextra.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EntityRenderCullingMixin",
+    "ParticleCullingMixin",
+    "ResourceCacheMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
