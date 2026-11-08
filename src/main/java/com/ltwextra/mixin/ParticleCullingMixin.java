@@ -12,17 +12,21 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Particle.class)
 public class ParticleCullingMixin {
 
-    // Feature 1 & 2: Culls duplicate or off-screen particle ticks and renders
     @Inject(method = "buildGeometry", at = @At("HEAD"), cancellable = true)
     private void onBuildGeometry(VertexConsumer vertexConsumer, Camera camera, float tickDelta, CallbackInfo ci) {
         MinecraftClient client = MinecraftClient.getInstance();
-        Particle particle = (Particle) (Object) this;
+        if (client.player == null) return;
 
-        // Cull particles completely out of camera line-of-sight
-        if (client.worldRenderer.getFrustum() != null) {
-            if (!client.worldRenderer.getFrustum().isVisible(particle.getBoundingBox())) {
-                ci.cancel();
-            }
+        Particle particle = (Particle) (Object) this;
+        
+        // Dynamic Distance Culling: Don't build geometries for far away particles
+        double maxDistanceSq = 576; // 24 blocks squared
+        double dx = particle.getBoundingBox().getCenter().x - camera.getPos().x;
+        double dy = particle.getBoundingBox().getCenter().y - camera.getPos().y;
+        double dz = particle.getBoundingBox().getCenter().z - camera.getPos().z;
+        
+        if ((dx * dx + dy * dy + dz * dz) > maxDistanceSq) {
+            ci.cancel();
         }
     }
 }
